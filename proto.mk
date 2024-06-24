@@ -18,5 +18,4 @@ generate.go:
 
 generate.py:
 	mkdir -p $(PROTO_OUT)
-	rm -rf $(PROTO_OUT)/*
-	protoc -I=. --python_out=$(PROTO_OUT) $(PROTO_FILES)
+	protoc --plugin=protoc-gen-mypy -I=. --mypy_out=$(PROTO_OUT) --python_out=$(PROTO_OUT) $(PROTO_FILES)
