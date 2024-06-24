@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package models.v1;
+
+option go_package = "./models";
+
+message EmailConfirmation {
+  string email = 1;
+  string salt = 2;
+  string name = 3;
+}
