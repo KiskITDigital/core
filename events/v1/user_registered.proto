@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package events.v1;
+
+import "models/v1/user.proto";
+
+message UserRegistered {
+     models.v1.User user= 1;
+}

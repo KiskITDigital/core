@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package models.v1;
+
+import "google/protobuf/timestamp.proto";
+
+message Organization {
+    int64 id = 1;
+    string brand_name = 2;
+    string full_name = 3;
+    string short_name = 4;
+    string inn = 5;
+    string okpo = 6;
+    string ogrn = 7;
+    string kpp = 8;
+    string tax_code = 9;
+    string address = 10;
+    optional string avatar_url = 11;
+    repeated Contact emails = 12;
+    repeated Contact phones = 13;
+    repeated Contact messengers = 14;
+    google.protobuf.Timestamp created_at = 15;
+    google.protobuf.Timestamp updated_at = 16;
+}
+
+message Contact {
+    string contact = 1;
+    string info = 2;
+}
