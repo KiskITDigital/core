@@ -21,9 +21,8 @@ message User {
     bool verified = 8;
     bool email_verified = 9;
     UserRole role = 10;
-    bool is_contractor = 11;
-    bool is_banned = 12;
-    models.v1.Organization organization = 13;
-    google.protobuf.Timestamp created_at = 14;
-    google.protobuf.Timestamp updated_at = 15;
+    bool is_banned = 11;
+    models.v1.Organization organization = 12;
+    google.protobuf.Timestamp created_at = 13;
+    google.protobuf.Timestamp updated_at = 14;
 }
