@@ -18,11 +18,9 @@ message User {
     string last_name = 5;
     string middle_name = 6;
     optional string avatar_url = 7;
-    bool verified = 8;
-    bool email_verified = 9;
-    UserRole role = 10;
-    bool is_banned = 11;
-    models.v1.Organization organization = 12;
-    google.protobuf.Timestamp created_at = 13;
-    google.protobuf.Timestamp updated_at = 14;
+    bool email_verified = 8;
+    UserRole role = 9;
+    models.v1.Organization organization = 10;
+    google.protobuf.Timestamp created_at = 11;
+    google.protobuf.Timestamp updated_at = 12;
 }

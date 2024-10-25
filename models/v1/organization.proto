@@ -15,13 +15,15 @@ message Organization {
     string kpp = 8;
     string tax_code = 9;
     string address = 10;
-    bool is_contractor = 11;
-    optional string avatar_url = 12;
-    repeated Contact emails = 13;
-    repeated Contact phones = 14;
-    repeated Contact messengers = 15;
-    google.protobuf.Timestamp created_at = 16;
-    google.protobuf.Timestamp updated_at = 17;
+    bool verified = 11;
+    bool is_contractor = 12;
+    bool is_banned = 13;
+    optional string avatar_url = 14;
+    repeated Contact emails = 15;
+    repeated Contact phones = 16;
+    repeated Contact messengers = 17;
+    google.protobuf.Timestamp created_at = 18;
+    google.protobuf.Timestamp updated_at = 19;
 }
 
 message Contact {
