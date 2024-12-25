@@ -5,7 +5,7 @@ package events.v1;
 import "models/v1/event_context.proto";
 import "models/v1/notification.proto";
 
-message SurveySubmitted {
+message SentNotification {
     models.v1.EventContext context = 1;
     models.v1.Notification notification = 2;
 }
