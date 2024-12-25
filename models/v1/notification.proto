@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package models.v1;
+
+message Notification {
+  int32 id = 1;                        
+  int32 user_id = 2;                   
+  string title = 3;                    
+  string comment = 4;                   
+  ActionButton action_button = 5;       
+  StatusBlock status_block = 6;         
+}
+
+message ActionButton {
+    string text = 1;                     
+    string url = 2;                      
+    bool styled = 3;                    
+}
+
+enum Status {
+  STATUS_INVALID = 0;   
+  STATUS_IN_REVIEW = 1;  
+  STATUS_DECLINED = 2;  
+  STATUS_APPROVED = 3;   
+}
+
+message StatusBlock {
+  string text = 1;                     
+  Status status = 2;                 
+}
