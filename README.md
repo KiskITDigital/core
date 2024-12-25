@@ -2,26 +2,28 @@
 
 ## Generate for golang
 
-```bash
-make generate.go
-```
-
-## Generate for python
-
-```bash
-make generate.go
-```
-
 ## Integration
 
+1. Добавить сабмодуль
 ```bash
-git submodule add git submodule add git@git.ubrato.ru:ubrato/proto.git proto proto
-echo "include ./proto/proto.mk" >> Makefile
-echo "PROTO_PATH = ./proto" >> Makefile
-echo "PROTO_OUT = ./some/path" >> Makefile
+git submodule add git@gitlab.ubrato.ru:ubrato/proto.git proto
 ```
 
-### For golang
+2. Проверить наличие настроек в makefile сервиса
+```
+PROTO_PATH=./proto
+PROTO_OUT=./internal/models/gen/proto
+PROTO_OUT_MODULE=gitlab.ubrato.ru/ubrato/НАЗВАНИЕ_ПРОЕКТА/internal/models/gen/proto
+
+include ./proto/proto.mk
+```
+
+3. Cгенерировать go код из proto
 ```bash
-echo "PROTO_OUT_MODULE = git.ubrato.ru/some/path/to/pkg" >>
+make generate.go
+```
+
+4. Получение обновлений proto для сервиса
+```bash
+git submodule update --init --recursive --remote
 ```
