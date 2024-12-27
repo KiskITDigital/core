@@ -3,7 +3,7 @@ syntax = "proto3";
 package models.v1;
 
 message Notification {                      
-  int32 user_id = 1;                   
+  int64 user_id = 1;                   
   string title = 2;                    
   string comment = 3;                   
   ActionButton action_button = 4;       
