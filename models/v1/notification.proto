@@ -3,12 +3,12 @@ syntax = "proto3";
 package models.v1;
 
 message Notification {                     
-  User user = 1;
+  NotifiedUser user = 1;
   Verification verification = 2;
   Object object = 3;
 }
 
-message User {
+message NotifiedUser {
   int32 id = 1;                                     
   int32 role = 2;  
 }
