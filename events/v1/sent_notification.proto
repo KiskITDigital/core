@@ -5,5 +5,5 @@ package events.v1;
 import "models/v1/notification.proto";
 
 message SentNotification {
-    models.v1.Notification notification = 2;
+    models.v1.Notification notification = 1;
 }
