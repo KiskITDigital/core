@@ -10,7 +10,7 @@ message Notification {
 
 message NotifiedUser {
   int32 id = 1;                                     
-  int32 role = 2;  
+  bool is_contractor = 2;  
 }
 
 message Verification {
