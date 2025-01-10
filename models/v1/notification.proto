@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "google/protobuf/timestamp.proto";
 package models.v1;
 
 message Notification {                     
@@ -21,7 +22,12 @@ message Verification {
 message Object {
   int32 id = 1;     
   ObjectType type = 2;
-  string title = 3;
+  Tender tender = 3;
+}
+
+message Tender {
+  string title = 1;
+  google.protobuf.Timestamp reception_start = 2;
 }
 
 enum ObjectType {
