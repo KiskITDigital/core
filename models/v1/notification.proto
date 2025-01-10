@@ -26,8 +26,9 @@ message Object {
 }
 
 message Tender {
-  string title = 1;
-  google.protobuf.Timestamp reception_start = 2;
+  int32 id = 1; 
+  string title = 2;
+  google.protobuf.Timestamp reception_start = 3;
 }
 
 enum ObjectType {
